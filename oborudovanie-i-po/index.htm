@@ -38,7 +38,122 @@
 					--theme-color-strict-inverse: #000000;
 				}
 			</style>
-<script type="text/javascript" data-skip-moving="true">(function(w, d, n) {var cl = "bx-core";var ht = d.documentElement;var htc = ht ? ht.className : undefined;if (htc === undefined || htc.indexOf(cl) !== -1){return;}var ua = n.userAgent;if (/(iPad;)|(iPhone;)/i.test(ua)){cl += " bx-ios";}else if (/Android/i.test(ua)){cl += " bx-android";}cl += (/(ipad|iphone|android|mobile|touch)/i.test(ua) ? " bx-touch" : " bx-no-touch");cl += w.devicePixelRatio && w.devicePixelRatio >= 2? " bx-retina": " bx-no-retina";var ieVersion = -1;if (/AppleWebKit/.test(ua)){cl += " bx-chrome";}else if ((ieVersion = getIeVersion()) > 0){cl += " bx-ie bx-ie" + ieVersion;if (ieVersion > 7 && ieVersion < 10 && !isDoctype()){cl += " bx-quirks";}}else if (/Opera/.test(ua)){cl += " bx-opera";}else if (/Gecko/.test(ua)){cl += " bx-firefox";}if (/Macintosh/i.test(ua)){cl += " bx-mac";}ht.className = htc ? htc + " " + cl : cl;function isDoctype(){if (d.compatMode){return d.compatMode == "CSS1Compat";}return d.documentElement && d.documentElement.clientHeight;}function getIeVersion(){if (/Opera/i.test(ua) || /Webkit/i.test(ua) || /Firefox/i.test(ua) || /Chrome/i.test(ua)){return -1;}var rv = -1;if (!!(w.MSStream) && !(w.ActiveXObject) && ("ActiveXObject" in w)){rv = 11;}else if (!!d.documentMode && d.documentMode >= 10){rv = 10;}else if (!!d.documentMode && d.documentMode >= 9){rv = 9;}else if (d.attachEvent && !/Opera/.test(ua)){rv = 8;}if (rv == -1 || rv == 8){var re;if (n.appName == "Microsoft Internet Explorer"){re = new RegExp("MSIE ([0-9]+[\.0-9]*)");if (re.exec(ua) != null){rv = parseFloat(RegExp.$1);}}else if (n.appName == "Netscape"){rv = 11;re = new RegExp("Trident/.*rv:([0-9]+[\.0-9]*)");if (re.exec(ua) != null){rv = parseFloat(RegExp.$1);}}}return rv;}})(window, document, navigator);</script>
+<script type="text/javascript" data-skip-moving="true">(function(w, d, n) {
+
+var cl = "bx-core";
+var ht = d.documentElement;
+var htc = ht ? ht.className : undefined;
+if (htc === undefined || htc.indexOf(cl) !== -1)
+{
+return;
+}
+
+var ua = n.userAgent;
+if (/(iPad;)|(iPhone;)/i.test(ua))
+{
+cl += " bx-ios";
+}
+else if (/Android/i.test(ua))
+{
+cl += " bx-android";
+}
+
+cl += (/(ipad|iphone|android|mobile|touch)/i.test(ua) ? " bx-touch" : " bx-no-touch");
+
+cl += w.devicePixelRatio && w.devicePixelRatio >= 2
+? " bx-retina"
+: " bx-no-retina";
+
+var ieVersion = -1;
+if (/AppleWebKit/.test(ua))
+{
+cl += " bx-chrome";
+}
+else if ((ieVersion = getIeVersion()) > 0)
+{
+cl += " bx-ie bx-ie" + ieVersion;
+if (ieVersion > 7 && ieVersion < 10 && !isDoctype())
+{
+cl += " bx-quirks";
+}
+}
+else if (/Opera/.test(ua))
+{
+cl += " bx-opera";
+}
+else if (/Gecko/.test(ua))
+{
+cl += " bx-firefox";
+}
+
+if (/Macintosh/i.test(ua))
+{
+cl += " bx-mac";
+}
+
+ht.className = htc ? htc + " " + cl : cl;
+
+function isDoctype()
+{
+if (d.compatMode)
+{
+return d.compatMode == "CSS1Compat";
+}
+
+return d.documentElement && d.documentElement.clientHeight;
+}
+
+function getIeVersion()
+{
+if (/Opera/i.test(ua) || /Webkit/i.test(ua) || /Firefox/i.test(ua) || /Chrome/i.test(ua))
+{
+return -1;
+}
+
+var rv = -1;
+if (!!(w.MSStream) && !(w.ActiveXObject) && ("ActiveXObject" in w))
+{
+rv = 11;
+}
+else if (!!d.documentMode && d.documentMode >= 10)
+{
+rv = 10;
+}
+else if (!!d.documentMode && d.documentMode >= 9)
+{
+rv = 9;
+}
+else if (d.attachEvent && !/Opera/.test(ua))
+{
+rv = 8;
+}
+
+if (rv == -1 || rv == 8)
+{
+var re;
+if (n.appName == "Microsoft Internet Explorer")
+{
+re = new RegExp("MSIE ([0-9]+[\.0-9]*)");
+if (re.exec(ua) != null)
+{
+rv = parseFloat(RegExp.$1);
+}
+}
+else if (n.appName == "Netscape")
+{
+rv = 11;
+re = new RegExp("Trident/.*rv:([0-9]+[\.0-9]*)");
+if (re.exec(ua) != null)
+{
+rv = parseFloat(RegExp.$1);
+}
+}
+}
+
+return rv;
+}
+
+})(window, document, navigator);</script>
 
 
 <link href="../bitrix/js/intranet/intranet-common.min.css?156700641462422" type="text/css" rel="stylesheet">
@@ -118,7 +233,7 @@
 		<nav class="navbar navbar-expand-lg g-py-0 g-px-10 u-navbar-color-black u-navbar-color-primary--hover u-navbar-align-around">
 			<div class="container">
 				<!-- Logo -->
-				<a href="../index.htm" class="landing-block-node-menu-logo-link navbar-brand u-header__logo" target="_self">
+				<a href="/" class="landing-block-node-menu-logo-link navbar-brand u-header__logo" target="_self">
 					<img class="landing-block-node-menu-logo u-header__logo-img u-header__logo-img--main g-max-width-180" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MyIgaGVpZ2h0PSI2MCI+PHJlY3QgaWQ9ImJhY2tncm91bmRyZWN0IiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4PSIwIiB5PSIwIiBmaWxsPSIjZGRkIiBmaWxsLW9wYWNpdHk9Ii43IiBzdHJva2U9Im5vbmUiLz48L3N2Zz4=" alt="" data-fileid="284" data-fileid2x="286" data-pseudo-url="{&quot;text&quot;:&quot;&quot;,&quot;href&quot;:&quot;&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;enabled&quot;:false}" data-lazy-img="Y" data-src="https://cdn-ru.bitrix24.ru/b16842680/landing/c9d/c9d63ca6a746588b98d341f4cc5e8ecf/imgonline-com-ua-Resize-50Js5XoyE9BSaM_1x.png" loading="lazy" data-srcset="https://cdn-ru.bitrix24.ru/b16842680/landing/07f/07fedf88e0729b42de0f6091ecd95964/imgonline-com-ua-Resize-50Js5XoyE9BSaM_2x.png 2x">
 				</a>
 				<!-- End Logo -->
